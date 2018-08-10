@@ -1,3 +1,4 @@
+// class HomeScreen + class DetailsScreen , u can remove it 
 import React, {Component} from 'react';
 import { StyleSheet, Image , View } from 'react-native';
 import { Container, Content, Button , Text, Card , CardItem } from 'native-base';
