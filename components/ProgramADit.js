@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { Container, Content, Button , Text, Card , CardItem , Body} from 'native-base';
+import { Container, Content, Button , Text, Card , CardItem , Body , Footer , Header , Title } from 'native-base';
 import { Table, Row, Rows } from 'react-native-table-component';
 
 export default class ProgramADit extends React.Component {
@@ -26,7 +26,14 @@ constructor(props) {
         <Button block rounded danger style={{ width:100 , height: 30, marginBottom: 10 }} > <Text>DONE</Text> </Button>
         ],
         [<Text> {'\n'} {'\t'}04/04 </Text> , 
-        <Text style={{ color: '#C34A36' }} >{'\n'}{'\t'}Task4</Text> , <Button block rounded success style={{ width:100 , height: 30, marginBottom: 10 }}  onPress={() => this.props.navigation.push('Submit')} > <Text>SUBMIT</Text> </Button>
+        <Text style={{ color: '#C34A36' }} >{'\n'}{'\t'}Task4</Text> , <Button block rounded success style={{ width:100 , height: 30, marginBottom: 10 }}  onPress={() => this.props.navigation.push('Submit')} > <Text style={{ 
+          top:180,
+          marginTop:1,
+          height: 50,
+          padding: 15,
+          marginRight: 30,
+          marginLeft:20 ,
+          color : 'white'}} >SUBMIT</Text> </Button>
         ],
       ]
     }
@@ -35,23 +42,17 @@ constructor(props) {
     const state = this.state;
     return (
     <Container >
-    <Image
-            source={{
-              uri: "https://e.top4top.net/p_952het911.png"
-            }}
-            style={{
-    alignSelf: 'center',
-    height: 150,
-    width: 150,
-    borderWidth: 1,
-    borderRadius: 75,
-    top:100
-            }} resizeMode="contain" />
-    <Text style={{ textAlign: 'center' , top:110 , color: '#00C9A7' , fontSize: 36 , fontWeight: 'bold' }} > Program A </Text>
-    <Text style={{ textAlign: 'center' , top:110 }} > Explain the program </Text>
+    
+    <Header>
+          <Body>
+            <Title>Program A </Title>
+          </Body>
+      </Header>
+    <Text style={{ textAlign: 'center' , top:30 , color: '#4B4453' , fontSize: 36 , fontWeight: 'bold' }} > Program A </Text>
+    <Text style={{ textAlign: 'center' , top:30 }} > Explain the program </Text>
     //must be link
 <Body>
-    <Button block rounded danger style={{ width:130 , height: 30, marginBottom: 10 , top : 120 }} 
+    <Button block rounded danger style={{ width:130 , height: 30, marginBottom: 10 , top : 50 }} 
           onPress={() => this.props.navigation.push('Skills')} >
         <Text > Skills owned </Text>  </Button> 
         </Body>
@@ -65,7 +66,7 @@ constructor(props) {
         </Table>
         </Card>
         <Text style={{textAlign: 'left' , top:-100 , color: '#C34A36' }}  > Collective task </Text>
-
+<Footer />
       </Container>
 
     );

@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { StyleSheet, Image } from 'react-native';
-import { Container, Content, Button , Text, Card , CardItem } from 'native-base';
+import { Container, Content, Button , Text, Card , CardItem , Header , Body , Title , Footer } from 'native-base';
 import { Table, Row, Rows } from 'react-native-table-component';
 
 export default class Skills extends React.Component {
@@ -8,6 +8,12 @@ export default class Skills extends React.Component {
     const state = this.state;
     return (
     <Container >
+    <Header>
+          <Body>
+            <Title>Skills </Title>
+          </Body>
+      </Header>
+
     <Image
             source={{
               uri: "https://e.top4top.net/p_952het911.png"
@@ -27,6 +33,7 @@ export default class Skills extends React.Component {
     <Text style={{ textAlign: 'Left' , top:110 , color: '#C34A36' , fontSize: 25 }}>          Second skill </Text>
     <Text style={{ textAlign: 'Left' , top:110 , color: '#C34A36' , fontSize: 25 }}>          Third skill </Text>
 
+ <Footer />
       </Container>
 
     );

@@ -12,12 +12,21 @@ import {
   Text,
   List,
   Button,
+  Header , 
+  Title , 
+  Footer
 } from 'native-base';
 
 export default class Submit extends React.Component {
   render() {
     return (
       <Container>
+         <Header>
+          <Body>
+            <Title>Submit</Title>
+          </Body>
+      </Header>
+      
        <Image
             source={{
               uri: 'https://e.top4top.net/p_952het911.png',
@@ -39,11 +48,11 @@ export default class Submit extends React.Component {
 //The Form must be changed to take a link
           <Form style={{ top: 100 }}>
             <Item floatingLabel>
-              <Label>Link</Label>
+              <Label >Link</Label>
               <Input />
             </Item>
             <Item floatingLabel last>
-              <Label>Link</Label> 
+              <Label >Link</Label> 
               <Input />
             </Item>
           </Form>
@@ -58,6 +67,7 @@ export default class Submit extends React.Component {
             </Button>
           </Body>
         </Content>
+         <Footer />
       </Container>
     );
   }
